@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 const MainMenu = ({ onStartGame }) => {
   const [teamBots, setTeamBots] = useState(4)
   const [enemyBots, setEnemyBots] = useState(4)
-
   const menuStyle = {
     width: '100vw',
     height: '100vh',
@@ -16,7 +15,6 @@ const MainMenu = ({ onStartGame }) => {
     position: 'relative',
     overflow: 'hidden'
   }
-
   const titleStyle = {
     fontSize: '84px',
     fontWeight: 'bold',
@@ -29,7 +27,6 @@ const MainMenu = ({ onStartGame }) => {
     WebkitTextFillColor: 'transparent',
     animation: 'pulse 2s ease-in-out infinite'
   }
-
   const subtitleStyle = {
     fontSize: '20px',
     marginBottom: '50px',
@@ -37,7 +34,6 @@ const MainMenu = ({ onStartGame }) => {
     letterSpacing: '3px',
     textTransform: 'uppercase'
   }
-
   const settingsStyle = {
     background: 'rgba(0,0,0,0.7)',
     padding: '30px',
@@ -46,11 +42,9 @@ const MainMenu = ({ onStartGame }) => {
     marginBottom: '40px',
     minWidth: '400px'
   }
-
   const sliderContainerStyle = {
     marginBottom: '20px'
   }
-
   const labelStyle = {
     display: 'block',
     marginBottom: '10px',
@@ -59,13 +53,11 @@ const MainMenu = ({ onStartGame }) => {
     textTransform: 'uppercase',
     letterSpacing: '1px'
   }
-
   const buttonContainerStyle = {
     display: 'flex',
     gap: '30px',
     zIndex: 10
   }
-
   const buttonStyle = (color) => ({
     padding: '25px 60px',
     fontSize: '26px',
@@ -82,17 +74,15 @@ const MainMenu = ({ onStartGame }) => {
     overflow: 'hidden',
     boxShadow: `0 0 20px ${color}40`
   })
-
   return (
     <div style={menuStyle}>
       <div style={titleStyle}>COUNTER-STRIKE</div>
       <div style={subtitleStyle}>Ultimate WebGL Experience</div>
-
       <div style={settingsStyle}>
         <h3 style={{ textAlign: 'center', marginBottom: '25px', color: '#ff6b35', fontSize: '22px' }}>
           GAME SETTINGS
         </h3>
-        
+       
         <div style={sliderContainerStyle}>
           <label style={labelStyle}>
             Your Team Bots: <span style={{ color: '#4a90e2' }}>{teamBots}</span>
@@ -106,7 +96,6 @@ const MainMenu = ({ onStartGame }) => {
             style={{ width: '100%', cursor: 'pointer' }}
           />
         </div>
-
         <div style={sliderContainerStyle}>
           <label style={labelStyle}>
             Enemy Bots: <span style={{ color: '#e74c3c' }}>{enemyBots}</span>
@@ -120,17 +109,15 @@ const MainMenu = ({ onStartGame }) => {
             style={{ width: '100%', cursor: 'pointer' }}
           />
         </div>
-
-        <div style={{ 
-          textAlign: 'center', 
-          marginTop: '20px', 
+        <div style={{
+          textAlign: 'center',
+          marginTop: '20px',
           color: '#888',
-          fontSize: '14px' 
+          fontSize: '14px'
         }}>
           Total players: {teamBots + enemyBots + 1}
         </div>
       </div>
-
       <div style={buttonContainerStyle}>
         <button
           style={buttonStyle('#4a90e2')}
@@ -149,7 +136,6 @@ const MainMenu = ({ onStartGame }) => {
           💀 Terrorists
         </button>
       </div>
-
       <style>{`
         @keyframes pulse {
           0%, 100% { opacity: 1; }
@@ -171,7 +157,7 @@ const MainMenu = ({ onStartGame }) => {
           border-radius: 50%;
           background: #ff6b35;
           cursor: pointer;
-          box-shadow: 0 0 10px #ff6b35;
+          boxShadow: 0 0 10px #ff6b35;
         }
         input[type="range"]::-moz-range-thumb {
           width: 20px;
@@ -179,7 +165,7 @@ const MainMenu = ({ onStartGame }) => {
           border-radius: 50%;
           background: #ff6b35;
           cursor: pointer;
-          box-shadow: 0 0 10px #ff6b35;
+          boxShadow: 0 0 10px #ff6b35;
           border: none;
         }
       `}</style>
